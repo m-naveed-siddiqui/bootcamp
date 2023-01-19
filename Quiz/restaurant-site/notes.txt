@@ -1,0 +1,8 @@
+Food Items and Drinks
+Prices, Images
+Colors, font-style
+Gallery for different food items
+(Can also add Sliding Images for a better look)
+Links to internal pages
+
+Responsive
