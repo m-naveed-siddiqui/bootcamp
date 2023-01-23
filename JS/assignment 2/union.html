@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Union Program</title>
+</head>
+<body>
+    <script>
+        function intersection(arr1,arr2) {
+            // Array.from() create an array from a string:
+            // you can only use it as Array.from()
+
+            // let union = Array.from(new Set(arr1.concat(arr2)));
+            let union = Array.from(new Set([...arr1, ...arr2]));
+            let union2 = new Set([...arr1, ...arr2]);
+            console.log(union);
+            console.log(union2);
+        }
+        
+        let array1 = new Array(1,2,3,4);
+        let array2 = [2,5,4,7];
+        intersection(array1, array2);
+    </script>
+</body>
+</html>

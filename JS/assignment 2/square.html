@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Square Program</title>
+</head>
+<body>
+    <script>
+        function square(value,arr) {
+            // console.log( value*value );
+            // console.log( Math.pow(value,2) );
+            console.log( value**2 );
+            
+            console.log('And square of each ['+arr+'] value is: ');
+            arr.forEach(element => {
+                console.log( element**2 );
+            });
+            // arr.forEach(element => console.log( element**2 ));
+        }
+        
+        let myArray = new Array(1,2,3,4);
+        let num = prompt("Enter number to find Square: ");
+        square(num, myArray);
+    </script>
+</body>
+</html>

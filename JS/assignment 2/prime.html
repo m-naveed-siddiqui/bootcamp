@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number Program</title>
+</head>
+<body>
+    <script>
+        function prime(number) {
+            let is_prime = true;
+            if (isNaN(number) || number===0 || number===1) {
+                is_prime = false;
+            } else {
+                // looping through 2 to number-1
+                for (let i = 2; i < number; i++) {
+                    if (number%i == 0) {
+                        is_prime = false;
+                        break;
+                    }
+                }
+            }
+            console.log(is_prime);
+        }
+
+        let value = parseInt( prompt('Enter number to find Prime:') );
+        prime(value);
+    </script>
+</body>
+</html>

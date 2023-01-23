@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fibonacci Program</title>
+</head>
+<body>
+    <script>
+        function fib(number) {
+            let n1 = 0, n2 = 1, nextTerm, fibArray = [];
+            for (let i = 1; i <= number; i++) {
+                nextTerm = n1 + n2;
+                fibArray.push(n1);
+                n1 = n2;
+                n2 = nextTerm;
+            }
+            console.log(fibArray);
+        }
+
+        let value = parseInt( prompt('Enter number to perform Fibonacci:') );
+        fib(value);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intersection Program</title>
+</head>
+<body>
+    <script>
+        function intersection(arr1,arr2) {
+            // The filter() method creates a new array filled with elements that pass a test provided by a function.
+            // console.log( arr1.filter(checkNumber) );
+            // console.log( arr1.filter(value => checkNumber(value)) );
+            // function checkNumber(number) {
+            //     return number >= 2;
+            // }
+
+            // includes() method check the existence of value in array or string
+            // console.log( arr2.includes(8) );  // false
+
+            let intersection = arr1.filter(value => arr2.includes(value));
+            console.log(intersection);
+        }
+        
+        let array1 = new Array(1,2,3,4);
+        let array2 = [2,5,4,7];
+        intersection(array1, array2);
+    </script>
+</body>
+</html>
