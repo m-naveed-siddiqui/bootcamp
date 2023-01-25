@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #1</title>
+</head>
+<body>
+    <h2>Task 1:</h2>
+    <ul>
+        <li>In this task we provide you with the start of a definition for a Shape class. It has three properties: name, sides, and side Length. This class only models shape for which all sides are the same length, like a square or an equilateral triangle.</li>
+        <li>Add a constructor to this class. The constructor takes arguments for the name, sides, and sideLength properties, and initializes them.</li>
+        <li>Add a new method calcPerimeter() method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console. </li>
+        <li>Create a new instance of the Shape class called square. Give it a name of square and a sideLength of 5.</li>
+        <li>Call your calcPerimeter() method on the instance, to see whether it logs the calculation result to the browser's console as expected.</li>
+        <li>Create a new instance of Shape called triangle, with a name of triangle and a sideLength of 3.</li>
+        <li>Call triangle.calcPerimeter() to check that it works OK.</li>
+    </ul>
+    <h2>See Answer in console:</h2>
+
+    <script>
+        let { log } = console;
+
+        class Shape {
+            name;
+            sides;
+            side_length;
+            constructor(name, sides, side_length) {
+                this.name = name;
+                this.sides = sides;
+                this.side_length = side_length;    
+            }
+            calcPerimeter() {
+                let length = this.sides*this.side_length;
+                log(length);
+            }
+        }
+
+        let square = new Shape('Square', 4, 5);
+        let triangle = new Shape('Triangle', 3, 3);
+
+        square.calcPerimeter();
+        triangle.calcPerimeter();
+    </script>
+
+</body>
+</html>

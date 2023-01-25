@@ -1,0 +1,67 @@
+	Task 1:
+●	In this task we provide you with the start of a definition for a Shape class. It has three properties: name, sides, and side Length. This class only models shape for which all sides are the same length, like a square or an equilateral triangle.
+●	Add a constructor to this class. The constructor takes arguments for the name, sides, and sideLength properties, and initializes them.
+●	Add a new method calcPerimeter() method to the class, which calculates its perimeter (the length of the shape's outer edge) and logs the result to the console. 
+●	Create a new instance of the Shape class called square. Give it a name of square and a sideLength of 5.
+●	Call your calcPerimeter() method on the instance, to see whether it logs the calculation result to the browser's console as expected.
+●	Create a new instance of Shape called triangle, with a name of triangle and a sideLength of 3.
+●	Call triangle.calcPerimeter() to check that it works OK.
+
+
+Task 2:
+●	Implement a class Player having PlayerID, PlayerName, PlayerRuns, PlayerDateofBirth,PlayerShirtNumber.
+●	It should also have methods DisplayInfo(), GetRuns(), AddRuns() that prints the splayers info, total runs of the player and can add runs.
+●	You should also create a class variable that stores total runs of all the players and there should be a
+●	method that displays the class variable
+
+Task 3:
+●	Write a JavaScript program to display the reading status (i.e. display book name, author name and reading status) of the following books
+
+var library = [ 
+  {
+      author: 'Bill Gates',
+      title: 'The Road Ahead',
+      readingStatus: true
+  },
+  {
+      author: 'Steve Jobs',
+      title: 'Walter Isaacson',
+      readingStatus: true
+  },
+  {
+      author: 'Suzanne Collins',
+      title:  'Mockingjay: The Final Book of The Hunger Games', 
+      readingStatus: false
+  }];
+
+Task 4:
+●	Make a Bank Account class with attributes accountId , accountTitle, balance, emailID. Make each variable private. Initialize all the attributes and make them private. Make settes(mutators) and getters(accessors) for all the variables. Now make a method withdrawAmount(amount) and depositAmount(amount). Each will have a parameter of some amount. For withdrawAmount() display user the amount that has been withdrawn and remaining balance . Make sure that amount that is being withdrawn is not greater than the balance. For depositAmount() add the amount and show the current balance.
+
+
+	Assets	Task 1:
+●	Define a class named Payment that contains a member variable that stores the amount of the payment.
+●	Also create a member function named paymentDetails that outputs an English sentence describing the
+●	amount of the payment.
+●	Next, define a class named CashPayment that is derived from Payment . This class should redefine the paymentDetails function to indicate that the payment is in cash. Include appropriate constructor.
+●	Define a class named CardPayment that is derived from Payment . This class should redefine the paymentDetails function to indicate that the payment is with card. Include appropriate constructor.
+●	Separately define a class named CreditCards. This class should contain member variables for the name on the card, expiration date, and credit card number. Include appropriate constructor. associate this class with
+●	CardPayment class to enable customers to pay with cards. Finally, redefine the paymentDetails function to include all credit card information in the printout.
+●	Create a main function that creates at least two CashPayment and two CardPayment objects with different
+●	values in a list and calls to paymentDetails for each. Hint: Abstraction and polymorphic behavior should
+●	be mentioned.
+
+Task 2:
+●	Write a program by creating an Employee class having the following functions and print the final salary. Having attributes salary and number of hours of work per day.
+●	Create getter and setter for the attributes 
+●	'getInfo()' which displays the salary, number of hours of work per day of employee. 
+●	'AddSal()' which adds $10 to the salary of the employee if it is less than $500. 
+●	'AddWork()' which adds $5 to the salary of the employee if the number of hours of work per day is more than 6 hours. 
+●	Create objects to test these functions. 
+
+Task 3:
+●	Write a program in which you are create a parent function “Game”. This function will have method info() in which you will return string “I love game and sports”
+●	Make 2 child classes “Cricket” and “Football” of parent “Game” and create overridden info methods for both classes and return string “I love cricket” and “I love football”.
+●	Create objects for all of the classes and display print the value in console. 
+
+Task 4:
+●	Create a class “Car” with method setName , setMake, setColor, setSpeed and print. Create an object for Class Car and use method Channing to set all the values and display the value with print method.s

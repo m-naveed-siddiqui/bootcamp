@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #2</title>
+</head>
+<body>
+    <h2>Task 2:</h2>
+    <ul>
+        <li>Implement a class Player having PlayerID, PlayerName, PlayerRuns, PlayerDateofBirth,PlayerShirtNumber.</li>
+        <li>It should also have methods DisplayInfo(), GetRuns(), AddRuns() that prints the splayers info, total runs of the player and can add runs.</li>
+        <li>You should also create a class variable that stores total runs of all the players and there should be a</li>
+        <li>method that displays the class variable</li>
+    </ul>
+    <h2>See Answer in console:</h2>
+    
+    <script>
+        let { log } = console;
+
+        class Player {
+            id; name; runs; dob; shirt_number;
+            static total_runs = 0;
+            constructor(id, name, runs, dob, shirt_number) {
+                this.id = id;
+                this.name = name;
+                this.runs = runs;
+                this.dob = dob;
+                this.shirt_number = shirt_number;
+                Player.total_runs += runs;
+            }
+            DisplayInfo() {
+                log('PLAYER INFO:');
+                log('-----> ID: ' + this.id);
+                log('-----> Name: ' + this.name);
+                log('-----> Date of Birth: ' + this.dob);
+                log('-----> Shirt Number: ' + this.shirt_number);
+            }
+            GetRuns() {
+                log(`${this.name}'s Runs: ${this.runs}`);
+            }
+            AddRuns(add_runs){
+                this.runs += add_runs;
+                Player.total_runs += add_runs;
+                log(`Added ${this.name}'s Runs: ${add_runs}`);
+            }
+            static TotalRuns() {
+              log('Total Runs: ' + Player.total_runs);
+            }
+        }
+
+        let naveed = new Player(1, 'Naveed', 40, "12-05-1997", 333);
+        naveed.DisplayInfo();
+        naveed.GetRuns();
+        naveed.AddRuns(55);
+        naveed.GetRuns();
+
+        log('');  // for line breaking
+        let fahad = new Player(2, 'Fahad', 65, "02-06-1989", 455);
+        fahad.DisplayInfo();
+        fahad.GetRuns();
+        fahad.AddRuns(10);
+        fahad.GetRuns();
+
+        log('');  // for line breaking
+        log('----------------');
+        Player.TotalRuns();
+    </script>
+
+</body>
+</html>

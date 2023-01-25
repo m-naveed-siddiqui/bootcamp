@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task #4</title>
+</head>
+<body>
+    <h2>Task 4:</h2>
+    <ul>
+        <li>Make a Bank Account class with attributes accountId , accountTitle, balance, emailID. Make each variable private. Initialize all the attributes and make them private. Make settes(mutators) and getters(accessors) for all the variables. Now make a method withdrawAmount(amount) and depositAmount(amount). Each will have a parameter of some amount. For withdrawAmount() display user the amount that has been withdrawn and remaining balance . Make sure that amount that is being withdrawn is not greater than the balance. For depositAmount() add the amount and show the current balance.</li>
+    </ul>
+    <h2>See Answer in console:</h2>
+    
+    <script>
+        let { log } = console;
+
+        class BankAccount {
+          #account_id; #account_title; #balance; #email_id;
+          setInfo(accountID, accountTitle, balance, emailID) {
+              this.#account_id = accountID;
+              this.#account_title = accountTitle;
+              this.#balance = balance;
+              this.#email_id = emailID;
+          }
+          getInfo() {
+              log('Account Info:');
+              log('-----> Account ID: ' + this.#account_id);
+              log('-----> Account Title: ' + this.#account_title);
+              log('-----> Account Balance: ' + this.#balance);
+              log('-----> Account Email: ' + this.#email_id);
+          }
+
+          withdrawAmount(amount) {
+            log('Withdrawing Amount ' + amount);
+              if(amount <= this.#balance){
+                let current_balance = this.#balance - amount;
+                log('Remaining Balance: ' + current_balance);
+              } else {
+                console.warn(`You have only ${this.#balance} amount in your account`);
+              }
+          }
+          depositAmount(amount){
+              let current_balance = this.#balance + amount;
+              log('Deposited ' + amount);
+              log('Current Balance: ' + current_balance)
+          }
+        }
+
+        let bank_account = new BankAccount();
+        bank_account.setInfo(001, 'Asaan Acount', 4000, 'abc@test.com');
+        bank_account.getInfo();
+
+        log('');  // for line breaking
+        bank_account.depositAmount(500)
+
+        log('');  // for line breaking
+        bank_account.withdrawAmount(5000);
+        log('');  // for line breaking
+        bank_account.withdrawAmount(1500);
+    </script>
+
+</body>
+</html>
