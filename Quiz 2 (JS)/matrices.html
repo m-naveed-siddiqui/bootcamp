@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Matrices</title>
+    </head>
+    <body>
+        <script>
+            let matrixA, matrixB, matrixC;
+
+            // Get matrix dimensions from user
+            let rowA = parseInt(prompt("Enter the number of rows for matrix A:"));
+            let colA = parseInt(prompt("Enter the number of columns for matrix A:"));
+            let rowB = parseInt(prompt("Enter the number of rows for matrix B:"));
+            let colB = parseInt(prompt("Enter the number of columns for matrix B:"));
+
+            // Check if matrices can be multiplied
+            while (colA !== rowB) {
+            alert("Matrix A's columns and Matrix B's rows must be equal for multiplication. Please enter correct values.");
+            // Get matrix dimensions again from user
+            rowA = parseInt(prompt("Enter the number of rows for matrix A:"));
+            colA = parseInt(prompt("Enter the number of columns for matrix A:"));
+            rowB = parseInt(prompt("Enter the number of rows for matrix B:"));
+            colB = parseInt(prompt("Enter the number of columns for matrix B:"));
+            }
+
+            // Create matrix A
+            matrixA = [];
+            for (let i = 0; i < rowA; i++) {
+            matrixA[i] = [];
+            for (let j = 0; j < colA; j++) {
+                matrixA[i][j] = parseInt(prompt("Enter the value for matrix A at row " + (i + 1) + " and column " + (j + 1)));
+            }
+            }
+
+            // Create matrix B
+            matrixB = [];
+            for (let i = 0; i < rowB; i++) {
+            matrixB[i] = [];
+            for (let j = 0; j < colB; j++) {
+                matrixB[i][j] = parseInt(prompt("Enter the value for matrix B at row " + (i + 1) + " and column " + (j + 1)));
+            }
+            }
+
+            // Multiply matrices A and B and store in matrix C
+            matrixC = [];
+            for (let i = 0; i < rowA; i++) {
+            matrixC[i] = [];
+            for (let j = 0; j < colB; j++) {
+                matrixC[i][j] = 0;
+                for (let k = 0; k < colA; k++) {
+                matrixC[i][j] += matrixA[i][k] * matrixB[k][j];
+                }
+            }
+            }
+
+            // Display the output in proper format
+            console.log("Matrix A:");
+            for (let i = 0; i < rowA; i++) {
+                console.log(matrixA[i]);
+            }
+            console.log("Matrix B:");
+            for (let i = 0; i < rowB; i++) {
+            console.log(matrixB[i]);
+            }
+            console.log("Matrix C (result of A * B):");
+            for (let i = 0; i < rowA; i++) {
+            console.log(matrixC[i]);
+            }
+        </script>
+    </body>
+</html>

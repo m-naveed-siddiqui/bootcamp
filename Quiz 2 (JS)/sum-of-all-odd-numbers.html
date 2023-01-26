@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sum of all Odd Numbers from Specific</title>
+    </head>
+    <body>
+        <p>Enter digits (should be more than 5):</p>
+        <input type="number" id="number" value="196783">
+        <button onclick="sumOdd()">Sum of Odd</button>
+        <div id="result"></div>
+
+        <script>
+            let number, odd, total=0;
+            let result = document.getElementById('result');
+            function sumOdd() {
+                number = document.getElementById('number').value;
+                if (number.length > 5) {
+                    // method #1
+                    // convert_to_array = number.split('');
+                    // odd = convert_to_array.filter(obj => returnOdd(obj));
+                    // result.innerHTML = odd.reduce((previousTotal, currentValue) => parseInt(previousTotal) + parseInt(currentValue));
+                    // method #2
+                    for (let i = 0; i < number.length; i++) {
+                        if (number[i]%2 != 0) {
+                            total += parseInt(number[i]); 
+                        }
+                    }
+                    result.innerHTML = total;
+                } else {
+                    result.innerHTML = 'Warning: Digits must be greater than 5';
+                }
+            }
+
+            // method #1
+            // function returnOdd(number) {
+            //     if(number%2 != 0){
+            //         return number;
+            //     }
+            // }
+        </script>
+    </body>
+</html>

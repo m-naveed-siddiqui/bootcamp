@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Check Palindrome</title>
+    </head>
+    <body>
+        <script>
+            function checkPalindrome(str) {
+                // const string_to_array = str.split("");
+                // const reverse_array = string_to_array.reverse();
+                // const array_to_string = reverse_array.join("");
+                const reverse_str = str.split("").reverse().join("");
+                if (reverse_str == str) {
+                    return `'${str}' is a palindrome`;
+                } else {
+                    return `'${str}' is not a palindrome`;
+                }
+            }
+            
+            let str = prompt('Enter any word to check Palindrome:');
+            document.write(checkPalindrome(str));
+        </script>
+    </body>
+</html>

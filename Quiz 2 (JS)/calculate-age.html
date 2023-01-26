@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculate Age in Years, Months and Days</title>
+    </head>
+    <body>
+        <p>Enter DOB:</p>
+        <input type="date" id="age">
+        <button onclick="calculate()">Calculate</button>
+        <div id="result"></div>
+
+        <script>
+            function calculate() {
+                const age = document.getElementById('age').value;
+
+                let showAgeYear = document.getElementById("showAgeYear")
+                let showAgeMonths = document.getElementById("showAgeMonths")
+                let showAgeDays = document.getElementById("showAgeDays")
+
+                var realTime = (new Date().getTime());
+                var birDate = (new Date(age).getTime());
+
+                var myBirDate = realTime - birDate;
+
+                let inYear = Math.floor(myBirDate/1000/60/60/24/30/12);
+                let inMonths = Math.floor(myBirDate/1000/60/60/24/30/30);
+                let inDays = Math.floor(myBirDate/1000/60/60/24/30);
+
+                document.getElementById('result').innerHTML = `${inYear} years, ${inMonths} months, ${inDays} days`;
+            }
+        </script>
+    </body>
+</html>

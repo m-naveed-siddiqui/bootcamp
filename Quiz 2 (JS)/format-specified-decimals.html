@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Format a Number up to Specified Decimal Places</title>
+    </head>
+    <body>
+        <script>
+            function specifiedDecimals(number,decimals) {
+                return number.toFixed(decimals)
+            }
+
+            let number = 123;
+            let decimals = prompt('Number : 123 \nHow many decimal(s) you want in the above number:');
+            document.write( specifiedDecimals(number,decimals) );
+        </script>
+    </body>
+</html>
