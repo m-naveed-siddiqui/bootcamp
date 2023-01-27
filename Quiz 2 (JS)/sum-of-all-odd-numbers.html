@@ -5,36 +5,37 @@
     </head>
     <body>
         <p>Enter digits (should be more than 5):</p>
-        <input type="number" id="number" value="196783">
+        <input type="number" id="digits" value="196783">
         <button onclick="sumOdd()">Sum of Odd</button>
         <div id="result"></div>
 
         <script>
-            let number, odd, total=0;
+            let digits, sum, odd;
             let result = document.getElementById('result');
             function sumOdd() {
-                number = document.getElementById('number').value;
-                if (number.length > 5) {
+                digits = document.getElementById('digits').value;
+                sum = 0
+                if (digits.length > 5) {
                     // method #1
-                    // convert_to_array = number.split('');
-                    // odd = convert_to_array.filter(obj => returnOdd(obj));
-                    // result.innerHTML = odd.reduce((previousTotal, currentValue) => parseInt(previousTotal) + parseInt(currentValue));
-                    // method #2
-                    for (let i = 0; i < number.length; i++) {
-                        if (number[i]%2 != 0) {
-                            total += parseInt(number[i]); 
+                    for (let digit of digits) {
+                        if (digit%2 != 0) {
+                            sum += parseInt(digit); 
                         }
                     }
-                    result.innerHTML = total;
+                    result.innerHTML = sum;
+                    // method #2
+                    // convert_to_array = digits.split('');
+                    // odd = convert_to_array.filter(obj => returnOdd(obj));
+                    // result.innerHTML = odd.reduce((previousTotal, currentValue) => parseInt(previousTotal) + parseInt(currentValue));
                 } else {
                     result.innerHTML = 'Warning: Digits must be greater than 5';
                 }
             }
 
-            // method #1
-            // function returnOdd(number) {
-            //     if(number%2 != 0){
-            //         return number;
+            // method #2
+            // function returnOdd(digits) {
+            //     if(digits%2 != 0){
+            //         return digits;
             //     }
             // }
         </script>
