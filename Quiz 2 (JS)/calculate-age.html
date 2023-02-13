@@ -5,28 +5,20 @@
     </head>
     <body>
         <p>Enter DOB:</p>
-        <input type="date" id="age">
-        <button onclick="calculate()">Calculate</button>
+        <input type="date" id="dob">
+        <button onclick="calculateAge()">Calculate Age</button>
         <div id="result"></div>
 
         <script>
-            function calculate() {
-                const age = document.getElementById('age').value;
-
-                let showAgeYear = document.getElementById("showAgeYear")
-                let showAgeMonths = document.getElementById("showAgeMonths")
-                let showAgeDays = document.getElementById("showAgeDays")
-
-                var realTime = (new Date().getTime());
-                var birDate = (new Date(age).getTime());
-
-                var myBirDate = realTime - birDate;
-
-                let inYear = Math.floor(myBirDate/1000/60/60/24/30/12);
-                let inMonths = Math.floor(myBirDate/1000/60/60/24/30/30);
-                let inDays = Math.floor(myBirDate/1000/60/60/24/30);
-
-                document.getElementById('result').innerHTML = `${inYear} years, ${inMonths} months, ${inDays} days`;
+            function calculateAge() {
+                const dob = document.getElementById('dob').value;
+                let diff_in_milli_secs = new Date()-new Date(dob);
+                let diff_in_date = new Date(diff_in_milli_secs);
+                
+                let years = diff_in_date.getFullYear()-1970;    // because calendar starts from 1970 year
+                let months = diff_in_date.getMonth();
+                let days = diff_in_date.getDate();
+                document.getElementById('result').innerHTML = `${years} years, ${months} months, ${days} days`;
             }
         </script>
     </body>
