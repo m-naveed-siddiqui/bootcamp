@@ -3,7 +3,7 @@ import axios from "axios";
 import { useQuery } from "react-query";
 
 function Weather() {
-    const apiKey = "ee00b3b78ab14f53aa5205616231302";
+    const apiKey = "<YOUR-API-KEY>";
     const baseURL = "http://api.weatherapi.com/v1";
 
     const [area, setArea] = useState('Lahore');
