@@ -1,0 +1,19 @@
+.highlight {
+  background-color: yellow;
+}
+
+.charHighlight {
+  background-color: coral;
+}
+
+.error {
+  background-color: lightcoral;
+  border: red;
+}
+
+.quote {
+  width: fit-content;
+  padding: 16px 4px;
+  box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%);
+  transition: 0.3s;
+}
