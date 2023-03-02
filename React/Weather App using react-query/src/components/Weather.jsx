@@ -4,7 +4,8 @@ import { useQuery } from "react-query";
 import Template from "./Template";
 
 function Weather() {
-    const apiKey = "ee00b3b78ab14f53aa5205616231302";
+    // api key from .env file
+    const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
     const baseURL = "http://api.weatherapi.com/v1";
     const [area, setArea] = useState('');
     const [result, setResult] = useState({});
